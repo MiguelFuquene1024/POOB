@@ -1,0 +1,64 @@
+
+import java.util.HashMap;
+/* @author ivan camilo rincon saavedra*/
+
+
+/* Punto 4 */
+
+public class EciJudge(){
+	private HashMap<String, Contest >contests = new HashMap();
+	private HashMap<String, Problem>problems = new HashMap();;
+	private HashMap<String, Team >teams= new HashMap();
+	private HashMap<String, Student >students= new HashMap();
+
+	
+
+	/**
+	 dado el nombre del equipo se busca en todos los equipos
+	 @param teamName, el nombre del equipo a buscar el cual es tipo String
+	 @return Team
+	*/
+
+	public Team findTeam( String teamName){
+		private Team team = null;
+		if ( teams.isKeys(teamName) ){
+			team= teams.get( teamName));
+		}
+		return team;
+	}
+
+
+
+	/**
+	 dado el nombre del concurso se busca en todos los concursos
+	 @param contestName, el nombre del concurso a buscar el cual es tipo String
+	 @return Contest
+	*/
+
+	public Contest findContest( String contestName ){
+		private Contest contest= null;
+		if ( contests.isKeys(contest) ){
+			contest = contests.get( contestName  );
+		}
+		return contest;
+	}
+
+
+	/**
+	 dado el nombre del problema se busca en todos los problemas
+	 @param problemName, el nombre del problema a buscar el cual es tipo String
+	 @return Problem
+	*/
+
+	public Problem findProblem( String problemName ){
+		private Problem problem = null;
+		
+		problem = c.findProblem( problemName );
+		return contest;
+	}
+
+
+	public registerSubmission( String contestName, String problemName, String teamName, String code ){
+		/* registeSubmission ............. se encuentra en la hoja*/
+	}
+}

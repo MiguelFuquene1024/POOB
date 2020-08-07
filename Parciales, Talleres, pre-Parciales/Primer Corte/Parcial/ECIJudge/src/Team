@@ -1,0 +1,39 @@
+import java.util.HashMap;
+public class Team( ){
+	private String name;
+	private HashMap< String , Student > students;
+	private HashMap< String , Submission > submissions;
+	
+	/**
+	dice si existe una entrega pendiente 
+	@return boolean, diciendo si hay una entrega pendiente o no
+	*/
+	public boolean hasPendingSubmission(){
+		private Submisison currentSubmisison ; 
+		private boolean pending = false;
+		
+		for (  ky in submissions.keys() ){
+			currentSubmisison = submissions.get( ky );
+			if ( currentSubmisison.getStatus() == "Pendiente" ){
+				pending = true;
+				return pending;
+			}
+		}
+		return pending;
+		
+		
+	}
+	
+	/**
+	crea una entrega dado un problema, codigo y un concurso
+	@param p, problema al cual se le asoc
+	@param code,
+	@param c,
+	
+	*/
+	public void createSubmission( Problem p , String code, Contest  c){
+		Submission newSubmission;
+		newSubmission = new Submission( code, c, p );
+		
+	}
+}

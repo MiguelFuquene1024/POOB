@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Calmatfra
+comment1.params=
+comment1.target=Calmatfra()
+comment2.params=variable\ matriz
+comment2.target=void\ asigne(java.lang.String,\ int[][][])
+comment2.text=\r\n\ \ \ \ \ \ \ @param\ variable,\ cadena\ de\ texto\ el\ cual\ representara\ la\ llave\ que\ se\ asignara\ a\ matriz\ en\ la\ hash\ map\r\n\ \ \ \ \ \ \ @param\ matriz,\ cubo\ de\ enteros\ que\ representa\ una\ matriz\ de\ numeradores\ y\ denominadores.\r\n
+comment3.params=respuesta\ matriz1\ f\ operacion
+comment3.target=void\ opere(java.lang.String,\ java.lang.String,\ Fraccionario,\ char)
+comment3.text=\r\n\ \ \ \ \ \ \ @param\ respuesta,\ cadena\ de\ texto\ el\ cual\ representara\ la\ llave\ que\ se\ asignara\ al\ resultado\ de\ la\ operacion\ de\ matriz1\ \r\n\ \ \ \ \ \ \ @param\ matriz1,\ cadena\ de\ texto\ el\ cual\ representara\ la\ llave\ que\ se\ asigno\ a\ matriz1\r\n\ \ \ \ \ \ \ @param\ f,\ Fraccionario\ a\ multiplicar\ en\ dado\ caso\ que\ se\ desee\ hacer\ producto\ punto\ (\ Puede\ ser\ null\ )\r\n\ \ \ \ \ \ \ @param\ operacion,\ operacion\ a\ realizar\ a\ matriz\ 1\ (Transpuesta,\ multiplicacion\ de\ un\ escalar\ a\ una\ matriz)\r\n
+comment4.params=respuesta\ operando1\ operacion\ operando2
+comment4.target=void\ opere(java.lang.String,\ java.lang.String,\ char,\ java.lang.String)
+comment4.text=\r\n\ \ \ \ \ \ \ @param\ respuesta,\ cadena\ de\ texto\ el\ cual\ representara\ la\ llave\ que\ se\ asignara\ al\ resultado\ de\ la\ operacion\ de\ operando1\ y\ operando2\r\n\ \ \ \ \ \ \ @param\ operando1,\ cadena\ de\ texto\ el\ cual\ representara\ la\ llave\ que\ se\ asigno\ a\ operando1\ en\ la\ hashMap\r\n\ \ \ \ \ \ \ @param\ operacion,\ operacion\ a\ realizar\ entre\ las\ matrices\ (\ +\ ,\ -,\ .\ ,\ *)\r\n\ \ \ \ \ \ \ @param\ operando2,\ cadena\ de\ texto\ el\ cual\ representara\ la\ llave\ que\ se\ asigno\ a\ operando2\ en\ la\ hashMap\r\n
+comment5.params=variable
+comment5.target=java.lang.String\ consulta(java.lang.String)
+comment5.text=\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ @param\ variable,\ cadena\ de\ texto\ el\ cual\ representara\ la\ llave\ que\ se\ consultar\r\n
+comment6.params=
+comment6.target=boolean\ ok()
+numComments=7

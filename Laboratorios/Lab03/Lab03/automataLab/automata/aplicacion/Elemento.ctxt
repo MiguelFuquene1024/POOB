@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Elemento
+comment0.text=\r\n\ Clase\ que\ describe\ los\ comportamientos\ de\ un\ Elemento\ \r\n\r\n\ @author\ Ivan\ Camilo\ Rincon\ Saavedra\r\n\ @author\ Miguel\ Angel\ Fuquene\ \r\n\ @version1.0\ 12/03/2020\r\n
+comment1.params=
+comment1.target=void\ decida()
+comment1.text=\r\n\ \ \ \ \ el\ decidir\ un\ estado\ de\ un\ elemento\ por\ defecto\ es\ no\ hacer\ nada\r\n
+comment2.params=
+comment2.target=void\ cambie()
+comment2.text=\r\n\ \ \ \ \ el\ cambiar\ un\ estado\ de\ un\ elemento\ por\ defecto\ es\ no\ hacer\ nada\r\n
+comment3.params=
+comment3.target=int\ getForma()
+comment3.text=\r\n\ \ \ \ \ metodo\ que\ dice\ si\ la\ forma\ del\ elemento\ es\ redonda\ o\ cuadrada\r\n\ \ \ \ \ @int,\ 1\ si\ es\ el\ elemento\ es\ redonda\ o\ 2\ si\ el\ elemnto\ es\ cuadrado\r\n
+comment4.params=
+comment4.target=java.awt.Color\ getColor()
+comment4.text=\r\n\ \ \ \ \ metodo\ abstracto\ el\ cual\ devuelve\ el\ color\ del\ elemento\r\n\ \ \ \ \ @return\ Color,\ que\ representa\ el\ color\ del\ elemento\ seleciconado\r\n
+comment5.params=
+comment5.target=boolean\ isVivo()
+comment5.text=\r\n\ \ \ \ \ metodo\ que\ dice\ si\ el\ elemento\ se\ encuentra\ viva\ o\ no\ \r\n\ \ \ \ \ @return\ boolean,\ que\ representa\ el\ estado\ del\ elemento\r\n
+numComments=6

@@ -1,0 +1,128 @@
+-Para el JOption las posible respuestas de un Show Dialog, elegir las que quiero
+-YES_OPTION
+-NO_OPTION
+-CANCEL_OPTION
+-OK_OPTION
+-CLOSED_OPTION
+-----------------------------
+-setDefaultCloseOperation ( atributoDeCerrado)
+para los diferentes comportamientos de cerrar una ventana
+
+------------------------------
+-JTabbedPane (pestañas ) 
+Este control se utiliza para mostrar mediante pestañas diferentes paneles o grupo de controles
+
+------------------------------
+http://www.myjavazone.com/2010/06/jmenubar-jmenu-y-jmenuitem.html
+-JMenuBar
+Este componente es muy útil ya que representa la barra de menú que vemos siempre en todo programa y es muy útil para acceder a la información de forma mas fácil y organizada. A continuación veremos como crear un JMenuBar.
+
+setJMenuBar(JMenuBar bar)
+
+JMenu
+
+Un menu es un objeto que se le añade al JMenuBar, y sirve para almacenar items comunes. Ahora veremos como crear un menu.
+
+JMenuItem
+------------------------------
+-Un JMenuItem 
+es un elemento del menu y al ser pulsado genera un evento, o sea, abre una ventana, pide datos o cualquier evento.
+
+------------------------------
+JFileChooser proporciona un mecanismo simple para que el usuario elija un
+archivo
+ 
+•JFileChooser: La Clase JFileChooser, nos presenta una ventana de herramientas, que, dependiendo de nuestra lógica, nos permitirá Abrir, Guardar archivos o cualquier otra acción, la ventana es una ventana de Dialogo para navegar por nuestros directorios.
+•getSelectedFile: Cuando seleccionamos el archivo deseado, lo agregamos a un objeto de tipo File por medio del método getSelectedFile(), posteriormente recorremos el archivo y lo almacenamos en un String.es decir guarda la ruta donde se planea guardar el archivo.
+
+•showOpenDialog se cargará la ventana con lo necesario para navegar por nuestros directorios y seleccionar el archivo que queremos abrir,
+•showSaveDialog: se cargará una ventana para navegar por nuestros directorios y definir la ruta donde será almacenado. Esto se logra hacer gracias al método showSaveDialog(this) de la clase JFileChooser, que nos permite cargar la ventana de dialogo y encontrar la ruta donde almacenaremos el archivo.
+
+areaTexto es cualquier componente java de alguna de nuestras ventanas, la que queramos que haga de ventana padre del diálogo JFileChooser. Nuestro diálogo JFileChooser no se podrá ir detrás de su ventana padre.
+
+La llamada showOpenDialog() se quedará bloqueada hasta que el usuario elija un fichero y cierre la ventana. A la vuelta, en selección tendremos
+
+JFileChooser.CANCEL_OPTION Si el usuario le ha dado al botón cancelar.
+JFileChooser.APPROVE_OPTION Si el usuario le ha dado al botón aceptar
+JFileCHooser.ERROR_OPTION Si ha ocurrido algún error.
+
+cada JFileChooser debe colocarce en nobre JFileChooser.setVisible(false) cuando se crea,
+cuando lo necesitemos segun la respuesta de un usuario ponemos JFileChooser.setVisible(true)
+
+Comprobando que se ha dado al botón aceptar, podemos obtener el fichero seleccionado por el usuario así
+
+import java.io.File;
+if (seleccion == JFileChooser.APROVE_OPTION)
+{
+   File fichero = fileChooser.getSelectedFile();
+   // Aquí debemos abrir y leer el fichero.
+   //fichero tiene la ruta 
+   //para saber el nombre se debe hacer
+   fichero.getName();
+   ...
+}
+
+
+
+Layout
+
+GridLayout
+// filas, columnas, espacioLibre filas,espacioLibre columnas
+JPanel ejemplo= new JPanel();
+ejemplo.setLayout( new GridLayout(,,,));
+
+BorderLayout
+//Agregar los paneles al JPanel Principal ( Psnel, Ubicacion)
+JPanel ejemplo= new JPanel();
+JPanel.add(JButton, BorderLayout.NORTH)
+
+
+Para poner figuras se debe importar la libreria 
+https://www.youtube.com/watch?v=nNu6ideyyGs
+https://www.youtube.com/watch?v=mMTlAQwi1Cg
+https://www.youtube.com/watch?v=VBvRGtEEGGE
+https://www.youtube.com/watch?v=YqO6NsFapZ0
+https://docs.oracle.com/javase/7/docs/api/java/awt/geom/package-summary.html
+https://laurel.datsi.fi.upm.es/_media/docencia/cursos/java/java2d.pdf
+
+import java.awt.geom.*;
+se puede encontrar las siguientes figuras
+
+Rectangle2D.Double
+The Double class defines a rectangle specified in double coordinates.
+
+
+
+
+Leer y escribir objetos
+Persitencia
+
+
+ile: Para crear o cargar el archivo.
+FileInputStream y FileOutputStream: Para leer o escribir los objetos.
+ObjectInputStream y ObjectOutputStream: Que serán los encargados de manejar la lectura y la escritura de los objetos.
+
+http://picarcodigo.blogspot.com/2013/02/leer-y-escribir-objetos-en-un-fichero.html
+
+En el nivel más primitivo, está leyendo bits de un archivo que FileInputStream puede hacer. Esto luego se filtra a través de ObjectInputStream que traduce estos bits en objetos Java, pero no conoce el tipo real del objeto creado, por lo que debe convertir el objeto como un automóvil (con suerte en un bloque try / catch en caso de que haya un error).
+
+
+pero es importante sabe que 
+Si no estas muy familiarizado con el encapsulamiento de una clase, visita este tema. Encapsulamiento
+Lo primero de todo, es que la clase, y cualquier clase, el cual un objeto suyo vaya a ser escrito o leído del disco, debe ser SIEMPRE Serializable. Esta interfaz no implementa ningún método, solo permite la correcta lectura y escritura de los objetos en el disco. Muy Importante.
+
+https://stackoverflow.com/questions/4709151/fileinputstream-and-objectinputstream
+
+
+
+http://lineadecodigo.com/java/obtener-la-ruta-absoluta-de-un-fichero-con-java/
+
+http://chuwiki.chuidiang.org/index.php?title=Lectura_y_Escritura_de_Ficheros_en_Java
+Podemos abrir un fichero de texto para leer usando la clase FileReader. Esta clase tiene métodos que nos permiten leer caracteres. Sin embargo, suele ser habitual querer las líneas completas, bien porque nos interesa la línea completa, bien para poder analizarla luego y extraer campos de ella. FileReader no contiene métodos que nos permitan leer líneas completas, pero sí BufferedReader. Afortunadamente, podemos construir un BufferedReader a partir del FileReader de la siguiente forma:
+
+File archivo = new File ("C:\\archivo.txt");
+FileReader fr = new FileReader (archivo);
+BufferedReader br = new BufferedReader(fr);
+...
+String linea = br.readLine();
+
